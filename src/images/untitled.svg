@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 80 800" width="80" height="800">
+    <path d="M74.07 621.94L74.07 18.06" stroke="#000000" stroke-width="8"></path>
+    <path d="M2.37 621.94L78.07 621.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M37.85 581.94L78.07 581.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M37.85 541.94L78.07 541.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M37.85 501.94L78.07 501.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M37.85 461.94L78.07 461.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M22.32 421.94L78.07 421.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M37.85 381.94L78.07 381.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M37.85 341.94L78.07 341.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M37.85 301.94L78.07 301.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M37.85 261.94L78.07 261.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M22.32 221.94L78.07 221.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M37.85 181.94L78.07 181.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M37.85 141.94L78.07 141.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M37.85 101.94L78.07 101.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M37.85 61.94L78.07 61.94" stroke="#000000" stroke-width="8"></path>
+    <path d="M0 21.94L75.7 21.94" stroke="#000000" stroke-width="8"></path>
+</svg>

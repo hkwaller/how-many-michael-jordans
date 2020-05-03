@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+.container {
+  padding: 0.5rem 2rem;
+  height: 100vh;
+  background-image: url('./images/triangle.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-dot {
+  background: #fc6d68;
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  margin: 0 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left {
+  position: relative;
+}
+
+.measurer-body {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 5rem;
+  height: 60vh;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  min-width: 40vw;
+  justify-content: flex-end;
+}
+
+.right {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  margin-left: 8rem;
+  min-width: 40vw;
+  margin-top: 10%;
 }
 
-.App-link {
-  color: #61dafb;
+.handle {
+  position: absolute;
+  right: 0;
+  height: 10px;
+  border-radius: 2px;
+  background-color: black;
+  width: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: blue;
+}
+
+.current-question {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+  margin-left: 2rem;
 }

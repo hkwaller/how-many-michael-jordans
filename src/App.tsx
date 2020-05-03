@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+import Header from './components/Header'
+import Game from './components/Game'
+import questions from './components/questions'
+import { Side } from './components'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+type Question = {
+  id: number
+  name: string
+  height: number
+  image: HTMLImageElement
 }
 
-export default App;
+function App() {
+  const [isCorrect, setIsCorrect] = useState(false)
+  const [currentQuestion, setCurrentQuestion] = useState<Question>(questions[0])
+
+  function checkAnswer(answer: number) {
+    if (currentQuestion.height === Math.floor(198 * answer)) {
+      setIsCorrect(true)
+    }
+    setCurrentQuestion(questions[1])
+  }
+
+  return (
+    <div style={{ flexDirection: 'row', display: 'flex' }}>
+      <div className="container">
+        <Header currentName={currentQuestion.name} />
+        <Game
+          onAnswer={answer => checkAnswer(answer)}
+          currentImage={currentQuestion.image}
+        />
+        {isCorrect && <div>tou are correct</div>}
+      </div>
+    </div>
+  )
+}
+
+export default App
