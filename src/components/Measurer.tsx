@@ -1,12 +1,13 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { motion, useMotionValue } from 'framer-motion'
+import { view } from '@risingstack/react-easy-state'
+import { superStore } from '../store'
 
 type Props = {
   height: number
-  setCurrentAnswer: (answer: number) => void
 }
 
-function Measurer({ height, setCurrentAnswer }: Props) {
+function Measurer({ height }: Props) {
   const [color, setColor] = useState('#000')
   const lines = height / 20
   const constraintsRef = useRef(null)
@@ -43,18 +44,18 @@ function Measurer({ height, setCurrentAnswer }: Props) {
         })}
         <motion.path
           drag="y"
-          whileTap={{ scale: 1.2 }}
+          whileTap={{ scale: 1.5, x: -16 }}
           dragConstraints={constraintsRef}
           className="handle"
-          style={{ top: x }}
+          style={{ top: y }}
           onDrag={(_, info) => {
             setY(info.point.y > 0 ? info.point.y : 0)
-            setCurrentAnswer((height - y) / height)
+            superStore.currentAnswer = (height - y) / height
             setColor('#fc6d68')
           }}
           onDragEnd={(_, info) => {
             setY(info.point.y > 0 ? info.point.y : 0)
-            setCurrentAnswer((height - y) / height)
+            superStore.currentAnswer = (height - y) / height
             setColor('#000')
           }}
           d="M20 4L84 4"
@@ -71,4 +72,4 @@ function Measurer({ height, setCurrentAnswer }: Props) {
   )
 }
 
-export default Measurer
+export default view(Measurer)

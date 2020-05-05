@@ -1,0 +1,30 @@
+.intro-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  bottom: -800px;
+  left: 100px;
+  overflow: hidden;
+}
+
+.result {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  text-shadow: -5px 0 white, 0 5px white, 1px 0 black, 0 -1px black;
+}
