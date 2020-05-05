@@ -29,8 +29,9 @@ function Main() {
 
   function checkAnswer() {
     setIsCorrect(false)
+    const answer = Math.floor(198 * superStore.currentAnswer)
 
-    if (currentQuestion.height === Math.floor(198 * superStore.currentAnswer)) {
+    if (currentQuestion.height === (answer || answer - 1 || answer + 1)) {
       setIsCorrect(true)
       setTimeout(() => {
         setCurrentQuestion(questions[superStore.currentIndex])
